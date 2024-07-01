@@ -59,10 +59,10 @@ export function NavigationMenuDemo() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
+          <NavigationMenuTrigger>XXXメニュー</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
-              <li className="row-span-3">
+            <ul className="grid gap-3 p-4 md:w-[200px] lg:w-[300px] lg:grid-cols-[.75fr_1fr]">
+              {/* <li className="row-span-3">
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
@@ -78,16 +78,17 @@ export function NavigationMenuDemo() {
                     </p>
                   </a>
                 </NavigationMenuLink>
+              </li> */}
+              <li className="row-span-3">
+                <ListItem href="/logintest" title="ログインテスト" className="md:w-[180px] lg:w-[260px]">
+                </ListItem>
+                <ListItem href="/session" title="セッション表示" className="md:w-[180px] lg:w-[260px]">
+                </ListItem>
+                <ListItem href="/registration" title="登録" className="md:w-[180px] lg:w-[260px]">
+                </ListItem>
+                <ListItem href="/reference" title="参照" className="md:w-[180px] lg:w-[260px]">
+                </ListItem>
               </li>
-              <ListItem href="/docs" title="Introduction">
-                Re-usable components built using Radix UI and Tailwind CSS.
-              </ListItem>
-              <ListItem href="/docs/installation" title="Installation">
-                How to install dependencies and structure your app.
-              </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Typography">
-                Styles for headings, paragraphs, lists...etc
-              </ListItem>
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
@@ -101,7 +102,7 @@ export function NavigationMenuDemo() {
                   title={component.title}
                   href={component.href}
                 >
-                  {component.description}
+                  {/* {component.description} */}
                 </ListItem>
               ))}
             </ul>
